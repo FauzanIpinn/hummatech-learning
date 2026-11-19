@@ -8,17 +8,17 @@ define('PERUSAHAAN', 'PT. Humma Teknologi Indonesia');
 const PAJAK_PPN = 0.11;
 
 // Variabel & Tipe Data
-$namaProduk  = "Server Rack 42U";
-$jumlahUnit  = 2;
-$hargaSatuan = 8500000.0;
-$isReady     = true;
-$gudang      = ["Malang", "Surabaya"];
+$namaProduk  = "Server Rack 42U"; //string
+$jumlahUnit  = 2; //int
+$hargaSatuan = 8500000.0; //decimal
+$isReady     = true; //boolean
+$gudang      = ["Malang", "Surabaya"]; //array
 
-// Operator Aritmatika & Logika
-$subtotal   = $jumlahUnit * $hargaSatuan;
-$nilaiPajak = $subtotal * PAJAK_PPN;
-$grandTotal = $subtotal + $nilaiPajak;
-$statusJual = ($isReady && $jumlahUnit > 0) ? "Dapat Dijual" : "Kosong";
+// Operator Aritmatika & Logika Perbandingan
+$subtotal   = $jumlahUnit * $hargaSatuan; //aritmatika
+$nilaiPajak = $subtotal * PAJAK_PPN; //aritmatika
+$grandTotal = $subtotal + $nilaiPajak; //aritmatika
+$statusJual = ($isReady && $jumlahUnit > 0) ? "Dapat Dijual" : "Kosong"; //perbandingan
 
 echo "Instansi    : " . PERUSAHAAN . "\n";
 echo "Produk      : $namaProduk ($statusJual)\n";
